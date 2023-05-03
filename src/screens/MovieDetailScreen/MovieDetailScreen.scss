@@ -6,7 +6,7 @@
   @include expand;
   background-color: $color-backgroundYellow;
   color: $color-white;
-
+  width: 100%;
   justify-content: start;
   align-items: start;
   padding: 15px;
@@ -34,7 +34,7 @@
 
 .plot {
   font-style: italic;
-  font-size: $size-default;
+  font-size: $size-medium;
 }
 
 .brokenImage {
