@@ -1,0 +1,13 @@
+@import './src//constants/colors.scss';
+
+@mixin color {
+  background-color: $color-marron;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  @include color;
+}

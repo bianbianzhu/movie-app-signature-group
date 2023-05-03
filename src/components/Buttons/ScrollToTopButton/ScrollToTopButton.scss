@@ -1,0 +1,14 @@
+@import '../../../constants/colors.scss';
+@import '../../../constants/layout.scss';
+@import '../../../constants/fonts.scss';
+
+.wrapper {
+  position: absolute;
+  right: 2.5%;
+  bottom: 10%;
+  background-color: $color-whiteOpacitiy40;
+  height: 55px;
+  aspect-ratio: 1;
+  @include center;
+  border-radius: 50%;
+}

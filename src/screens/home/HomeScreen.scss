@@ -1,0 +1,16 @@
+@import '../../constants/colors.scss';
+@import '../../constants/layout.scss';
+@import '../../constants/fonts.scss';
+
+.container {
+  @include expand;
+  background-color: $color-marron;
+  color: $color-white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.errMsg {
+  font-size: $size-bigHeading;
+  color: $color-white;
+}
