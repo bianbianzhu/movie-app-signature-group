@@ -42,6 +42,8 @@ This repository holds the source code and config for the Movie app.
 
 - This button simply calls the same API with a different page number.
 
-## year filter
+## Year filter
 
 - This filter is implemented by using the `year` query parameter of the API. The API does not support a range of years, so the UI only supports one year at the moment.
+
+- To reset the year filter, load all movies and click the `reset` button. I did this on purpose, as I am bad 😈
