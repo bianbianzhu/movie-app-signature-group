@@ -1,4 +1,4 @@
-import { View, Text, Image, ActivityIndicator } from 'react-native';
+import { View, Text, Image, ActivityIndicator, ScrollView } from 'react-native';
 import React, { useEffect, useState } from 'react';
 import useSearchMovie from '../../hooks/useSearchMovie';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
@@ -19,7 +19,7 @@ const MovieDetailScreen = ({ route }) => {
   }, [movie?.Title]);
 
   return (
-    <View style={Styles.container}>
+    <ScrollView contentContainerStyle={Styles.container}>
       {error ? (
         <Text style={Styles.errMsg}>{error}</Text>
       ) : isLoading ? (
@@ -51,7 +51,7 @@ const MovieDetailScreen = ({ route }) => {
           <Text style={Styles.plot}>{movie?.Plot}</Text>
         </>
       )}
-    </View>
+    </ScrollView>
   );
 };
 
