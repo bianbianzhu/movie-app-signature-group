@@ -21,3 +21,10 @@
   border-radius: 5px;
   flex: 1;
 }
+
+.errMsg {
+  color: $color-red;
+  font-size: $size-mini;
+  align-self: start;
+  margin-left: 5%;
+}

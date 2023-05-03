@@ -13,7 +13,7 @@ const BASE_URL: string = Constants?.manifest?.extra?.omdbapi?.base_url || '';
 
 const DEFAULT_SEARCH_PARAM = 'batman';
 
-const useFetchMovies = (pageNum: number) => {
+const useFetchMovies = (pageNum: number, year: string) => {
   const [movies, setMovies] = useState<DeepReadonly<IMovieSummary[]>>([]);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<string>('');
@@ -22,8 +22,8 @@ const useFetchMovies = (pageNum: number) => {
     const searchParam = DEFAULT_SEARCH_PARAM;
     return `${BASE_URL}?apikey=${API_KEY}&s=${encodeURIComponent(
       searchParam
-    )}&page=${encodeURIComponent(pageNum)}`;
-  }, [pageNum]);
+    )}&y=${encodeURIComponent(year)}&page=${encodeURIComponent(pageNum)}`;
+  }, [pageNum, year]);
 
   useEffect(() => {
     (async () => {
