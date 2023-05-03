@@ -7,6 +7,7 @@ describe('FilterModal component', () => {
     const setIsModalVisible = jest.fn();
     const setInputValue = jest.fn();
     const setIsAccumulating = jest.fn();
+    const resetOtherValue = jest.fn();
 
     const { getByTestId, getByText } = render(
       <FilterModal
@@ -14,6 +15,7 @@ describe('FilterModal component', () => {
         setIsModalVisible={setIsModalVisible}
         setInputValue={setInputValue}
         setIsAccumulating={setIsAccumulating}
+        resetOtherValue={resetOtherValue}
       />
     );
 
@@ -30,6 +32,7 @@ describe('FilterModal component', () => {
     const setIsModalVisible = jest.fn();
     const setInputValue = jest.fn();
     const setIsAccumulating = jest.fn();
+    const resetOtherValue = jest.fn();
 
     const { getByTestId, getByText } = render(
       <FilterModal
@@ -37,6 +40,7 @@ describe('FilterModal component', () => {
         setIsModalVisible={setIsModalVisible}
         setInputValue={setInputValue}
         setIsAccumulating={setIsAccumulating}
+        resetOtherValue={resetOtherValue}
       />
     );
 
@@ -50,6 +54,7 @@ describe('FilterModal component', () => {
     const setIsModalVisible = jest.fn();
     const setInputValue = jest.fn();
     const setIsAccumulating = jest.fn();
+    const resetOtherValue = jest.fn();
 
     const { getByTestId, getByText } = render(
       <FilterModal
@@ -57,6 +62,7 @@ describe('FilterModal component', () => {
         setIsModalVisible={setIsModalVisible}
         setInputValue={setInputValue}
         setIsAccumulating={setIsAccumulating}
+        resetOtherValue={resetOtherValue}
       />
     );
 

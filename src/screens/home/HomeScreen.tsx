@@ -43,6 +43,7 @@ const HomeScreen = () => {
         isModelVisible={isModelVisible}
         setIsModalVisible={setIsModalVisible}
         setInputValue={setYear}
+        resetOtherValue={setPage}
         setIsAccumulating={setIsAccumulating}
       />
       {error ? (

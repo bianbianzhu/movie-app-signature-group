@@ -6,6 +6,7 @@ import MovieCard from '../MovieCard/MovieCard';
 import Styles from './MovieList.scss';
 import LoadMoreButton from '../Buttons/LoadMoreButton/LoadMoreButton';
 import ScrollToTopButton from '../Buttons/ScrollToTopButton/ScrollToTopButton';
+import * as Crypto from 'expo-crypto';
 
 const NUM_OF_COLUMNS = 2;
 
@@ -17,7 +18,8 @@ const MovieList = ({
   setPage: React.Dispatch<React.SetStateAction<number>>;
 }) => {
   const movieListRef = useRef<FlatList<IMovieSummary>>(null);
-  const keyExtractor = (item: IMovieSummary) => item?.imdbID;
+  const keyExtractor = (item: IMovieSummary) =>
+    item?.imdbID + Crypto.randomUUID();
   const renderItem = ({ item }: { item: IMovieSummary }) => (
     <MovieCard movie={item} />
   );

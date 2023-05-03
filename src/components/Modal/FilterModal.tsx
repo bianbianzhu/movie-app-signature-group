@@ -12,11 +12,13 @@ const FilterModal = ({
   setIsModalVisible,
   setInputValue,
   setIsAccumulating,
+  resetOtherValue,
 }: {
   isModelVisible: boolean;
   setIsModalVisible: React.Dispatch<React.SetStateAction<boolean>>;
   setInputValue: React.Dispatch<React.SetStateAction<any>>;
   setIsAccumulating: React.Dispatch<React.SetStateAction<boolean>>;
+  resetOtherValue: React.Dispatch<React.SetStateAction<any>>;
 }) => {
   const [inputText, setInputText] = useState<string>('');
   const [error, setError] = useState<string>('');
@@ -64,6 +66,7 @@ const FilterModal = ({
               setIsModalVisible((pre) => !pre);
               setIsAccumulating(false);
               setInputValue(inputText);
+              resetOtherValue(1);
               setInputText('');
               setError('');
             }}
