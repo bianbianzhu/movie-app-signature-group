@@ -29,6 +29,7 @@ const FilterModal = ({
       onRequestClose={() => {
         setIsModalVisible((pre) => !pre);
       }}
+      testID="modal-view"
     >
       <View style={Styles.centeredView}>
         <View style={Styles.modalView}>
@@ -39,6 +40,7 @@ const FilterModal = ({
               setError('');
             }}
             style={Styles.closeBtn}
+            testID="close-btn"
           >
             <EvilIcons name="close" size={36} color="black" />
           </Pressable>
@@ -49,6 +51,7 @@ const FilterModal = ({
             placeholder={PLACEHOLDER_TEXT}
             keyboardType="numeric"
             placeholderTextColor={'#6f6f6f'}
+            testID="modal-input"
           />
           {error && <Text style={Styles.errMsg}>{error}</Text>}
           <Pressable

@@ -20,10 +20,12 @@ const MovieCard = ({ movie }: { movie: IMovieSummary }) => {
           headerTitle: movie?.Title,
         });
       }}
+      testID="movie-card-container"
     >
       <View style={Styles.container}>
         {!isBrokenImage ? (
           <Image
+            testID="movie-card-image"
             source={{ uri: Poster }}
             style={Styles.image}
             resizeMode="cover"

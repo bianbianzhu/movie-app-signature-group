@@ -14,7 +14,7 @@ const ScrollToTopButton = ({
   onPress: (event: GestureResponderEvent) => void;
 }) => {
   return (
-    <TouchableWithoutFeedback onPress={onPress}>
+    <TouchableWithoutFeedback onPress={onPress} testID="scroll-to-top-button">
       <View style={Styles.wrapper}>
         <Ionicons name="caret-up-outline" size={24} color="#f7931d" />
       </View>
